@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+:root{
+    --VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+    --DesaturatedDarkBlue: hsl(214, 17%, 51%);
+    --GrayishBlue: hsl(212, 23%, 69%);
+    --LightGrayishBlue: hsl(210, 46%, 95%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Manrope', sans-serif;
+}
+
+body{
+    background: var(--LightGrayishBlue);
+}
+
+.card{
+    width: 85vw;
+    height: 75vh;
+    background: white;
+    position: relative;
+    margin: 0 auto;
+    top: 12.5vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 35% 65%;
+    border-radius: 10px;
+    /* box-shadow: 1px 0 1px 0px rgba(0,0,0,0.5); */
+}
+.card .card-top{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.card .card-top img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    border-radius: 10px 10px 0px 0px;
+}
+.card-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: flex-start;
+    justify-content: space-between;
+    padding: 35px 29px 20px 29px ;
+}
+.card-bottom-title p{
+    font-size: 1.6rem;
+    color: var(--VeryDarkGrayishBlue);
+    font-weight: 700;
+}
+.card-bottom-description p{
+    font-size: 1.4rem;
+    color: var(--GrayishBlue);
+    font-weight: 400;
+}
+
+.card-bottom-user{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+}
+.card-bottom-user-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-bottom-user-img img{
+    width: 50px;
+    border-radius: 100%;
+}
+.card-bottom-user-info{
+    width: 150px;
+    padding-left: 10px;
+}
+.card-bottom-user-info p:nth-child(1){
+    color: var(--VeryDarkGrayishBlue);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.card-bottom-user-info p:nth-child(2){
+    color: var(--DesaturatedDarkBlue);
+    font-size: 1.3rem;
+}
+.card-bottom-user .card-bottom-user-share{
+    height: 40px;
+    width: 40px;
+    background: var(--LightGrayishBlue);
+    border-radius: 100%;
+}
+.card-bottom-user-share div{
+    background-image: url('../images/icon-share.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.card-bottom-user .card-bottom-user-share-active{
+    background: var(--VeryDarkGrayishBlue);
+}
+ .card-bottom-user-share .card-bottom-user-share-img{
+    background-image: url('../images/icon-share2.svg');
+} 
+.card-bottom-share-container{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    display: none;
+}
+.card-bottom-share-container-active{
+    animation: myMove 0.3s;
+    display: block;
+}
+@keyframes myMove {
+    0%   {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+
+.card-bottom-share{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+    padding: 10px 29px 10px 29px;
+    background: var(--VeryDarkGrayishBlue);
+    border-radius: 0 0 10px 10px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-bottom-share-title p{
+    letter-spacing: 5px;
+    color: var(--GrayishBlue);
+    font-size: 1.3rem;
+}
+.card-bottom-share-social{
+    height: 100%;
+    width: 150px;
+}
+.card-bottom-share-social ul{
+    display: flex;
+    list-style: none;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card-bottom-share-social ul li:nth-child(1) a div{
+    background-image: url('../images/icon-facebook.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+}
+.card-bottom-share-social ul li:nth-child(2) a div{
+    background-image: url('../images/icon-twitter.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+}
+.card-bottom-share-social ul li:nth-child(3) a div{
+    background-image: url('../images/icon-pinterest.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+}
+.card-bottom-share .card-bottom-share-share{
+    height: 40px;
+    width: 40px;
+    background: var(--DesaturatedDarkBlue);
+    border-radius: 100%;
+}
+.card-bottom-share .card-bottom-share-share div{
+    background-image: url('../images/icon-share2.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@media screen and (min-width: 768px) {
+    
+    .card{
+        grid-template-columns: 35% 65%;
+        grid-template-rows: 1fr;
+        max-width: 652px;
+        height: 35vh;
+        top: 32.5vh;
+    }
+    
+    .card .card-top img{
+        border-radius: 10px 0px 0px 10px;
+    }
+    .card-bottom-share-container{
+        right: -55px;
+        bottom: 85px;
+        width: 230px;
+        height: 50px;
+    }
+    .card-bottom-share{
+        width: 100%;
+        height: 50px;
+        padding: 0 15px;
+        border-radius: 10px;
+        justify-content: space-evenly;
+        box-shadow: 2px 2px 10px 0px rgba(1, 1, 1, 0.5);
+    }
+    .card-bottom-share::after{
+        position: absolute;
+        content: "";
+        width: 0; 
+        height: 0; 
+        border-left: 15px solid var(--VeryDarkGrayishBlue);
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        transform: rotate(90deg);
+        bottom: -21px;
+        left: 117px;
+    }
+    .card-bottom-share .card-bottom-share-share{
+        display: none;
+    }
+    .card-bottom-share-social{
+        width: 100px;
+    }
+    .card-bottom-share-social ul {
+        justify-content: space-between;
+    }
+}
+
+
+
